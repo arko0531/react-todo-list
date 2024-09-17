@@ -9,6 +9,11 @@ const Button = (props) => {
         buttonStyle = 'button-write';
     else if (title === '삭제')
         buttonStyle = 'button-delete';
+    else if (title === '전체 삭제') {  
+        buttonStyle = 'button-delete-all'
+    }
+        
+
     
     return (
         <button className={buttonStyle} onClick={onClick}>

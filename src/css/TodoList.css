@@ -1,5 +1,21 @@
 .listWrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
+}
+
+.todoControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.todoControlsNone {
+    display: none;
+}
+
+.countText {
+    display: inline-block;
+    margin-bottom: 4px;
 }
