@@ -3,10 +3,14 @@ import Button from './ui/Button'
 import '../css/TodoListItem.css'
 
 const TodoListItem = (props) => {
-  const {todo, onToggleTodo} = props;
+  const {todo, onToggleTodo, onDeleteTodo} = props;
 
   const handleChange = () => {
     onToggleTodo(todo.id);
+  }
+
+  const onDelete = () => {
+    onDeleteTodo(todo.id);
   }
 
   const contentText = todo.isDone ? 'contentTextDone' : 'contentText';
@@ -24,9 +28,7 @@ const TodoListItem = (props) => {
         <div className='todayText'>{todo.todoToday}</div>
         <Button 
             title = '삭제'
-            // onClick = {() => {
-
-            // }}
+            onClick = {onDelete}
         />
     </div>
   )

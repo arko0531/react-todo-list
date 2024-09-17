@@ -3,7 +3,7 @@ import '../css/TodoList.css'
 import TodoListItem from './TodoListItem'
 
 const TodoList = (props) => {
-  const {todos, onToggleTodo} = props;
+  const {todos, onToggleTodo, onDeleteTodo} = props;
 
   return (
     <div>
@@ -15,6 +15,7 @@ const TodoList = (props) => {
                   key={todo.id}
                   todo={todo}
                   onToggleTodo={onToggleTodo}
+                  onDeleteTodo={onDeleteTodo}
               />
               );
             })}

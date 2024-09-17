@@ -20,20 +20,20 @@ function App() {
   }
 
   const onToggleTodo = (id) => {
-    setTodos(todos.map(todo => {
-      if (todo.id === id) {
-        return { ...todo, isDone: !todo.isDone };
-      } else {
-        return todo;
-      }
-    }));
+    setTodos(todos.map(todo => todo.id === id 
+      ? {...todo, isDone : !todo.isDone} 
+      : todo));
   };
+
+  const onDeleteTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  }
 
   return (
     <div className='Wrapper'>
       <div><Header /></div>
       <div><TodoWrite onAddTodo = {onAddTodo}/></div>
-      <div><TodoList todos = {todos} onToggleTodo = {onToggleTodo}/></div>
+      <div><TodoList todos = {todos} onToggleTodo = {onToggleTodo} onDeleteTodo = {onDeleteTodo}/></div>
     </div>
   );
 }
