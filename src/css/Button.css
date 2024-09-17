@@ -1,0 +1,25 @@
+Button {
+    padding : 12px;
+    font-size : 16px;
+    border: none;
+    border-radius : 12px;
+    cursor : pointer;
+}
+
+/* 작성 */
+.button--write {
+    background-color: rgb(221, 228, 255);
+    box-shadow: 0px 0px 2px 2px rgb(201, 209, 240);
+}
+.button--write:active {
+    background-color: rgb(201, 209, 240);
+}
+
+/* 삭제 */
+.button-delete {
+    background-color: rgb(255, 212, 212);
+    box-shadow: 0px 0px 2px 2px rgb(239, 194, 194);
+}
+.button-delete:active {
+    background-color: rgb(239, 194, 194);
+}

@@ -1,0 +1,22 @@
+.TodoListItem {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.checkbox_wrapper {
+    display: flex;
+}
+.checkbox_wrapper input {
+    width: 16px;
+    height: 16px;
+    align-items: center;
+    margin: 0;
+}
+
+.content {
+    flex-grow: 1;  
+}
