@@ -2,13 +2,26 @@ import React from 'react'
 import Button from './ui/Button'
 import '../css/TodoListItem.css'
 
-const TodoListItem = () => {
+const TodoListItem = (props) => {
+  const {todo, onToggleTodo} = props;
+
+  const handleChange = () => {
+    onToggleTodo(todo.id);
+  }
+
+  const contentText = todo.isDone ? 'contentTextDone' : 'contentText';
+
   return (
-    <div className='TodoListItem'>
-        <div className='checkbox_wrapper'>
-            <input type= 'checkbox'></input>
+    <div className='itemWrapper'>
+        <div className='checkboxWrapper'>
+            <input 
+              type= 'checkbox' 
+              checked={todo.isDone} 
+              onChange={handleChange}>
+            </input>
         </div>
-        <div className='content'>할 일 적기</div>
+        <div className={contentText}>{todo.content}</div>
+        <div className='todayText'>{todo.todoToday}</div>
         <Button 
             title = '삭제'
             // onClick = {() => {

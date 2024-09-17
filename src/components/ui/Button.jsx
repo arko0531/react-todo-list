@@ -6,7 +6,7 @@ const Button = (props) => {
 
     let buttonStyle = '';
     if (title === '작성')
-        buttonStyle = 'button--write';
+        buttonStyle = 'button-write';
     else if (title === '삭제')
         buttonStyle = 'button-delete';
     

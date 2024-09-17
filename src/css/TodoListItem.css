@@ -1,4 +1,4 @@
-.TodoListItem {
+.itemWrapper {
     display: flex;
     flex-direction: row;
     gap: 16px;
@@ -7,16 +7,26 @@
     border-bottom: 1px solid rgb(230, 230, 230);
 }
 
-.checkbox_wrapper {
+.checkboxWrapper {
     display: flex;
 }
-.checkbox_wrapper input {
+.checkboxWrapper input {
     width: 16px;
     height: 16px;
     align-items: center;
     margin: 0;
 }
 
-.content {
+.contentText {
     flex-grow: 1;  
+}
+
+.todayText{
+    font-size: 14px;
+    color: rgb(104, 104, 104);
+}
+
+.contentTextDone {
+    text-decoration: line-through;
+    flex-grow: 1;
 }

@@ -7,11 +7,11 @@ Button {
 }
 
 /* 작성 */
-.button--write {
+.button-write {
     background-color: rgb(221, 228, 255);
     box-shadow: 0px 0px 2px 2px rgb(201, 209, 240);
 }
-.button--write:active {
+.button-write:active {
     background-color: rgb(201, 209, 240);
 }
 
