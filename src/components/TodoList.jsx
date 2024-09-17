@@ -12,6 +12,14 @@ const TodoList = (props) => {
   else
     todoControls = 'todoControlsNone';
 
+  const todoCount = () => {
+    const notDoneCount = todos.filter((todo) => !(todo.isDone)).length; // 할 일 개수
+    const doneCount = todos.filter((todo) => todo.isDone).length; // 완료된 개수
+  
+    return {notDoneCount, doneCount};
+  }
+  const { notDoneCount, doneCount } = todoCount();
+
   return (
     <div>
       <div>
@@ -19,8 +27,8 @@ const TodoList = (props) => {
       </div>
       <div className={todoControls}>
         <div>
-          <span className='countText'>할 일 개수 : {/* 개수 세기 */}</span><br />
-          <span className='countText'>완료된 개수 : {/* 개수 세기 */}</span>
+          <span className='countText'>할 일 개수 : {notDoneCount}개</span><br />
+          <span className='countText'>완료된 개수 : {doneCount}개</span>
         </div>
         <Button
           title = '전체 삭제'
