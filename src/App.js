@@ -9,7 +9,7 @@ function App() {
   const idRef = useRef(1);
 
   // 작성
-  const onAddTodo = (text) => {
+  const handleAddTodo = (text) => {
     const newTodo = {
       id : idRef.current,
       isDone : false,
@@ -21,32 +21,32 @@ function App() {
   }
 
   // 체크박스 변경
-  const onToggleTodo = (id) => {
+  const handleToggleTodo = (id) => {
     setTodos(todos.map(todo => todo.id === id 
       ? {...todo, isDone : !todo.isDone} 
       : todo));
   };
 
   // 삭제
-  const onDeleteTodo = (id) => {
+  const handleDeleteTodo = (id) => {
     setTodos(todos.filter(todo => todo.id !== id));
   }
 
   // 전체 삭제
-  const onDeleteTodoAll = () => {
+  const handleDeleteTodoAll = () => {
     setTodos([]);
   }
 
   return (
     <div className='Wrapper'>
       <div><Header /></div>
-      <div><TodoWrite onAddTodo = {onAddTodo} /></div>
+      <div><TodoWrite onAddTodo = {handleAddTodo} /></div>
       <div>
         <TodoList 
           todos = {todos} 
-          onToggleTodo = {onToggleTodo} 
-          onDeleteTodo = {onDeleteTodo}  
-          onDeleteTodoAll = {onDeleteTodoAll}
+          onToggleTodo = {handleToggleTodo} 
+          onDeleteTodo = {handleDeleteTodo}  
+          onDeleteTodoAll = {handleDeleteTodoAll}
         />
       </div>
     </div>

@@ -9,7 +9,7 @@ const TodoListItem = (props) => {
     onToggleTodo(todo.id);
   }
 
-  const onDelete = () => {
+  const handleDelete = () => {
     onDeleteTodo(todo.id);
   }
 
@@ -28,7 +28,7 @@ const TodoListItem = (props) => {
         <div className='todayText'>{todo.todoToday}</div>
         <Button 
             title = '삭제'
-            onClick = {onDelete}
+            onClick = {handleDelete}
         />
     </div>
   )

@@ -7,12 +7,12 @@ const TodoWrite = (props) => {
   const [content, setContent] = useState('');
   const focusRef = useRef();
 
-  const onChangeContent = (event) => {
+  const handleChangeContent = (event) => {
     setContent(event.target.value);
   }
 
   // 작성 버튼 함수
-  const onSubmit = () => {
+  const handleSubmit = () => {
     if (content) {
       onAddTodo(content);
       setContent('');
@@ -20,9 +20,9 @@ const TodoWrite = (props) => {
       focusRef.current.focus();
   }
 
-  const onKeyPress = (event) => {
+  const handleKeyPress = (event) => {
     if(event.key === 'Enter')
-      onSubmit();
+      handleSubmit();
   }
 
   return (
@@ -33,13 +33,13 @@ const TodoWrite = (props) => {
               type='text' 
               placeholder='Todo를 작성해주세요.' 
               value={content} 
-              onChange={onChangeContent} 
+              onChange={handleChangeContent} 
               ref={focusRef} 
-              onKeyDown={onKeyPress}>
+              onKeyDown={handleKeyPress}>
             </input>
             <Button 
                 title = '작성'
-                onClick = {onSubmit}
+                onClick = {handleSubmit}
             />
         </div>
     </div>
