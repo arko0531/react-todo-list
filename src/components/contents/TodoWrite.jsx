@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react'
-import '../css/TodoWrite.css'
-import Button from './ui/Button'
+import '../../css/TodoWrite.css'
+import Button from '../ui/Button'
 
 const TodoWrite = (props) => {
   const {onAddTodo} = props;

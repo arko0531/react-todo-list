@@ -1,7 +1,7 @@
 import React from 'react'
-import '../css/TodoList.css'
+import '../../css/TodoListItem.css'
 import TodoListItem from './TodoListItem'
-import Button from './ui/Button'
+import Button from '../ui/Button'
 
 const TodoList = (props) => {
   const {todos, onToggleTodo, onDeleteTodo, onDeleteTodoAll} = props;
